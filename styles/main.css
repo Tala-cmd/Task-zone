@@ -25,6 +25,7 @@ scroll-behavior: smooth;
 }
 
 body{
+    margin-top: 120px;
 font-family: 'Nunito Sans', sans-serif;
 background: linear-gradient(to bottom, var(--first-color), var(--container-color));
 }
