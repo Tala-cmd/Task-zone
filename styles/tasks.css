@@ -29,6 +29,10 @@ border-radius: 12px;
 text-align: center;
 }
 
+.input{
+
+}
+
 .todo-input-grid {
 padding-top:20px;
 display: grid;
