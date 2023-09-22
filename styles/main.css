@@ -28,7 +28,7 @@ scroll-behavior: smooth;
 body{
 display: flex;
 flex-direction: column;
-background: linear-gradient(to bottom, var(--first-color), var(--container-color));
+background-color: var(--container-color);
 }
 
 input{

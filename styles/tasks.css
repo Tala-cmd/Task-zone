@@ -12,6 +12,7 @@ padding:20px 10px;
 font-size: 40px;
 font-weight: 700;
 text-align: center;
+color: var(--text-color);
 }
 
 .task__name-container{
@@ -26,7 +27,6 @@ margin-bottom: 15px;
 padding: 20px;
 border-radius: 12px;
 text-align: center;
-cursor: pointer;
 }
 
 .todo-input-grid {
@@ -38,9 +38,9 @@ row-gap: 10px;
 align-items: center;
 }
 
-.due-date-input,  .add-todo-button{
+.due-time-input, .add-todo-button{
 font-size: 20px;
-background-color: #5b777b;
+background-color:#A1A1A1;
 color:white;
 margin-left: 8px;
 margin-bottom: 8px;
@@ -53,23 +53,59 @@ transition: background-color 0.4s;
 }
 
 .add-todo-button{
+display: grid;
+grid-template-columns: 1fr 20px;
+}
+
+.add-todo-button i{
+color:black;
+font-size: 24px;
+vertical-align: -2px;
+padding-left: -40px;
+}
+
+.due-time-input:hover,  .add-todo-button:hover{
+background-color:rgb(106, 106, 106);
+transition: background-color 0.4s;
+}
+
+.add-todo-button{
 margin-left: 0;
 margin-right: 8px;
 }
 
-.todo-grid{
+.todo-container{
+background-color:  #B0E0E6;
+color:var(--text-color);
+border-radius: 10px;
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr auto auto;
 row-gap: 20px;
+font-size: 20px;
+padding:12px;
+margin: 16px;
 }
 
-  .delete-todo-button {
-    background-color: darkred;
-    color: white;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
+
+.todo-name, .todo-time{
+margin: 10px
+}
+
+.edit-todo-button, .delete-todo-button{
+background-color: transparent;
+color: white;
+border: none;
+font-size: 20px;
+cursor: pointer;
+padding: 12px;
+margin-right: 10px;
+box-sizing: border-box;
+color: var(--text-color);
+}
+
+.edit-todo-button:hover, .delete-todo-button:hover{
+  border-bottom: solid 2px white;
+  transition: border-bottom 0.2s;
   }
 
