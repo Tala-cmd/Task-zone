@@ -2,7 +2,7 @@ const todoList = [{
     name: 'Make breakfast',
     dueTime: '6:00'
   }, {
-    name: 'wash dishes',
+    name: 'Wash dishes',
     dueTime: '8:00'
   }];
   
@@ -48,11 +48,15 @@ const todoList = [{
       
           // Add an event listener to the input for when the user finishes editing
           editInput.addEventListener('blur', () => {
-            // Update the task text with the edited content
             taskText.textContent = editInput.value;
-        
-            // Remove the input element and show the updated task text
             todoContainer.replaceChild(taskText, editInput);
+        });
+
+        editInput.addEventListener('keydown', (event) => {
+          if(event.key==='Enter'){
+            taskText.textContent = editInput.value;
+            todoContainer.replaceChild(taskText, editInput);
+          }
         });
       
         // Focus the input element to start editing
