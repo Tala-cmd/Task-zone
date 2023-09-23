@@ -15,6 +15,7 @@ const todoList = [{
         const { name, dueTime } = todoObject;
         const html = `
         <div class="todo-container">
+        <input class="check-box" type="checkbox">
           <div class="todo-name">${name}</div>
           <div class="todo-time">${dueTime}</div>
           <button class="edit-todo-button js-edit-todo-button"> <i class="ri-edit-fill"> </i></button>
