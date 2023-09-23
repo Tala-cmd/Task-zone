@@ -32,7 +32,6 @@ background-color: var(--container-color);
 }
 
 input{
-appearance: none;
 border:none;
 outline: none;
 }

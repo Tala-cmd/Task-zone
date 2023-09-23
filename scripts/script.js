@@ -7,7 +7,7 @@ const todoList = [{
   }];
   
   renderTodoList();
-  
+
   function renderTodoList() {
     let todoListHTML = '';
   
@@ -15,8 +15,9 @@ const todoList = [{
         const { name, dueTime } = todoObject;
         const html = `
         <div class="todo-container">
-        <input class="check-box" type="checkbox">
-          <div class="todo-name">${name}</div>
+          <input type="checkbox" class="check-box" id="check-box-${index}">
+
+          <label for="check-box-${index}" class="todo-name">${name}</label>
           <div class="todo-time">${dueTime}</div>
           <button class="edit-todo-button js-edit-todo-button"> <i class="ri-edit-fill"> </i></button>
           <button class="delete-todo-button js-delete-todo-button"> <i class="ri-delete-bin-line"></i> </i></button> 
@@ -24,7 +25,7 @@ const todoList = [{
         `;
         todoListHTML += html;
     });
-  
+    console.log('HTML:', todoListHTML);
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
     
     document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index) => {
