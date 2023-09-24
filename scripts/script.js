@@ -1,12 +1,16 @@
-const todoList = [{
-    name: 'Make breakfast',
-    dueTime: '6:00'
-  }, {
-    name: 'Wash dishes',
-    dueTime: '8:00'
-  }];
+const todoList = loadTodoList();
   
   renderTodoList();
+
+function loadTodoList() {
+  const savedTodoList = localStorage.getItem('todoList');
+  return savedTodoList ? JSON.parse(savedTodoList) : [];
+}
+
+function saveTodoList() {
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+}
+
 
   function renderTodoList() {
     let todoListHTML = '';
@@ -65,6 +69,7 @@ const todoList = [{
         editInput.focus();
       } )
       })
+      saveTodoList();
   }
   
     document.querySelector('.js-add-todo-button').addEventListener('click', () => {

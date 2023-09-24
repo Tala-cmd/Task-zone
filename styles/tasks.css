@@ -126,7 +126,7 @@ border-bottom: solid 2px white;
 transition: border-bottom 0.2s;
 }
 
-@media screen and (min-width: 1150px){
+@media screen and (min-width: 576px){
   .task__container{
   display:flex;
   align-items: center;
